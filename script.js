@@ -2,7 +2,7 @@ var currentIndex = 0;
 
 document.addEventListener('DOMContentLoaded', function(){
 
- 
+
 
   var pages = document.getElementsByClassName('page');
   for(var i = 0; i < pages.length; i++)
@@ -27,26 +27,27 @@ document.addEventListener('DOMContentLoaded', function(){
       }
   }
 
-    var prevPage = document.getElementsByClassName('prevPage');
-    prevPage[0].onclick = function(){
-
-      console.log('prev page button clicked. cur page index =',currentIndex)
-
-      if (currentIndex <= 0){
-        console.log("At the start")
-      } else {
-        currentIndex--;
-      }
-    }
-    var nextPage = document.getElementsByClassName('nextPage');
-    nextPage[0].onclick = function(){
-
-      console.log('next page button clicked. cur page index =',currentIndex)
-
-      if (currentIndex >= pages.length){
-        console.log("At the end")
-      } else {
-        currentIndex++;
-      }
-    }
+    // var prevPage = document.getElementsByClassName('prevPage');
+    // prevPage[0].onclick = function(){
+    //
+    //   console.log('prev page button clicked. cur page index =',currentIndex)
+    //
+    //   if (currentIndex <= 0){
+    //     console.log("At the start")
+    //   } else {
+    //     currentIndex--;
+    //   }
+    // }
+    //
+    // var nextPage = document.getElementsByClassName('nextPage');
+    // nextPage[0].onclick = function(){
+    //
+    //   console.log('next page button clicked. cur page index =',currentIndex)
+    //
+    //   if (currentIndex >= pages.length){
+    //     console.log("At the end")
+    //   } else {
+    //     currentIndex++;
+    //   }
+    // }
 })
