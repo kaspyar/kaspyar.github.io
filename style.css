@@ -1,31 +1,20 @@
 .book {
   transition: opacity 0.4s 0.2s;
 }
-.prevPage {
-  width: 60vw;
-  height: 20vw;
-  background: red;
-  position:absolute;
-  top: 0px;
-  opacity: 0.1;
-}
-
-.nextPage {
-  width: 60vw;
-  height: 20vw;
-  background: green;
-  position:absolute;
-  bottom: 0px;
-  opacity: 0.1;
-}
 .sliderImage{
-  width: 60vw;
-  height: 40vw;
-  border-radius: 20px;
+  width: 30vw;
+  height: 44vw;
+}
+p{
+  margin-top: 8vw;
+  text-align: center;
+  font-size: 5vw;
+  color: #000000;
 }
 .page {
   width: 30vw;
   height: 44vw;
+  background-color: #111111;
   float: left;
   margin-bottom: 0.5em;
   background: left top no-repeat;
@@ -36,14 +25,11 @@
 }
 .book {
   perspective: 250vw;
-  width: 60vw;
-  height: 40vw;
 }
 .book .pages {
   width: 60vw;
-  height: 40vw;
+  height: 44vw;
   position: relative;
-  top: 0;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   border-radius: 4px;
@@ -55,14 +41,15 @@
   margin: 0;
   position: absolute;
   top: 0;
-  width: 60vw;
-  height: 40vw;
+  width: 30vw;
+  height: 44vw;
   transform-origin: 0 0;
   transition: transform 1.4s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   cursor: pointer;
   user-select: none;
+  background-color: #f0f0f0;
 }
 .book .page:before {
   content: '';
@@ -77,11 +64,13 @@
 }
 .book .page:nth-child(odd) {
   pointer-events: all;
-  transform: rotateX(0deg);
-  border-radius: 20px;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
 }
 .book .page:nth-child(odd):hover {
-  transform: rotateX(15deg);
+  transform: rotateY(-15deg);
 }
 .book .page:nth-child(odd):hover:before {
   background: rgba(0, 0, 0, 0.03);
@@ -91,7 +80,7 @@
 }
 .book .page:nth-child(even) {
   pointer-events: none;
-  transform: rotateX(90deg);
+  transform: rotateY(180deg);
   transform-origin: 100% 0;
   left: 0;
   border-radius: 4px 0 0 4px;
@@ -106,17 +95,17 @@
 }
 .book .page.flipped:nth-child(odd) {
   pointer-events: none;
-  transform: rotateX(90deg);
+  transform: rotateY(-180deg);
 }
 .book .page.flipped:nth-child(odd):before {
   background: rgba(0, 0, 0, 0.2);
 }
 .book .page.flipped:nth-child(even) {
   pointer-events: all;
-  transform: rotateX(90deg);
+  transform: rotateY(0deg);
 }
 .book .page.flipped:nth-child(even):hover {
-  transform: rotateX(15deg);
+  transform: rotateY(15deg);
 }
 .book .page.flipped:nth-child(even):hover:before {
   background: rgba(0, 0, 0, 0.03);
@@ -132,15 +121,7 @@
 html,
 body {
   font-family: 'Lovers Quarrel', cursive;
-
-  	background-image: url("bg.png");
-  	margin:0;
-  	padding:0;
-
-  	height: 100%;
-  	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
+  background: #333;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
