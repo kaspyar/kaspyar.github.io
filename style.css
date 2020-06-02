@@ -3,18 +3,16 @@
   background-image: url("img/bg.png");
   margin:0;
   padding:0;
-
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   width: 100vw;
-  height: 80vw;
+  height: 60vw;
 }
 .sliderImage{
-  width: 37.5vw;
-  height: 55vw;
+  width: 28vw;
+  height: 42vw;
 }
 p{
   margin-top: 8vw;
@@ -38,14 +36,14 @@ p{
   perspective: 250vw;
 }
 .book .pages {
-  width: 75vw;
-  height: 55vw;
+  width: 56vw;
+  height: 42vw;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   border-radius: 4px;
-  left: 12vw;
-  top: 12vw;
+  left: 21vw;
+  top: 9vw;
   /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 .book .page {
@@ -54,8 +52,8 @@ p{
   margin: 0;
   position: absolute;
   top: 0;
-  width: 37.5vw;
-  height: 55vw;
+  width: 28vw;
+  height: 42vw;
   transform-origin: 0 0;
   transition: transform 1.4s;
   backface-visibility: hidden;
