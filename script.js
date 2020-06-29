@@ -22,12 +22,17 @@ var pages = document.getElementsByClassName('page');
                 currentVideo.pause();
 
                 this.previousElementSibling.classList.remove('flipped');
-                var nextVideo = this.previousElementSibling.getElementsByClassName('sliderVideo')[0];
-                nextVideo.play();
+                var prevVideo = this.previousElementSibling.getElementsByClassName('sliderVideo')[0];
+                prevVideo.play();
                 
                 if (this.previousElementSibling.previousElementSibling){
-                  var nextNextVideo = this.previousElementSibling.previousElementSibling.getElementsByClassName('sliderVideo')[0];
-                  nextNextVideo.play();
+                  var prevPrevVideo = this.previousElementSibling.previousElementSibling.getElementsByClassName('sliderVideo')[0];
+                  prevPrevVideo.play();
+                }
+                
+                if (this.nextElementSibling){
+                  var nextVideo = this.nextElementSibling.getElementsByClassName('sliderVideo')[0];
+                  nextVideo.pause();
                 }
               }
             else
