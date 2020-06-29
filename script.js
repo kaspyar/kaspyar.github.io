@@ -37,6 +37,11 @@ var pages = document.getElementsByClassName('page');
               }
             else
               {
+                if (this.previousElementSibling){
+                  var prevVideo = this.previousElementSibling.getElementsByClassName('sliderVideo')[0];
+                  prevVideo.pause();
+                }
+
                 this.classList.add('flipped');
                 var currentVideo = this.getElementsByClassName('sliderVideo')[0];
                 currentVideo.pause();
