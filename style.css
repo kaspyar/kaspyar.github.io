@@ -4,7 +4,7 @@
   padding:0;
 
   width: 100vw;
-  height: 60vw;
+  height: 50vw;
 }
 .sliderImage{
   width: 30vw;
@@ -37,7 +37,7 @@
   backface-visibility: hidden;
   border-radius: 4px;
   left: 22.3vw;
-  top: 8.6vw;
+  top: 3vw;
   /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 .book .page {
@@ -47,7 +47,7 @@
   position: absolute;
   top: 0;
   width: 30vw;
-  height: auto;
+  height: 42.75vw;
   transform-origin: 0 0;
   transition: transform 1.4s;
   backface-visibility: hidden;
