@@ -23,6 +23,20 @@
   background: left top no-repeat;
   background-size: cover;
 }
+.pageForegroundOdd {
+  width: 30vw;
+  height: 42.75vw;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,.10) 0%, rgba(0,0,0,0) 10%);
+}
+.pageForegroundEven {
+  width: 30vw;
+  height: 42.75vw;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to left, rgba(0,0,0,.08) 0%, rgba(0,0,0,0) 10%);
+}
 .page:nth-child(even) {
   clear: both;
 }
